@@ -1,11 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 @font-face {
-    font-family: "figtree";
+    font-family: 'figtree';
     src: url(../assets/fonts/Figtree-VariableFont_wght.ttf);
 }
 
@@ -14,75 +8,90 @@
     --white: hsl(0, 0%, 100%);
     --gray-500: hsl(0, 0%, 42%);
     --gray-950: hsl(0, 0%, 7%);
+    --fonte: 'figtree';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte);
 }
 
 body {
     background: var(--yellow);
-    font-family: "figtree";
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 main {
     background: var(--white);
-    max-width: 375px;
-    height: 520px;
+    max-width: 360px;
     padding: 20px;
-    border-radius: 15px;
     border: 1px solid black;
-    box-shadow: 6px 6px black;
+    border-radius: 15px;
+    box-shadow: 8px 8px black;
 }
 
-img.illustration {
-    border-radius: inherit;
-    margin: 0 auto 25px;
+img[src*='illustration'] {
+    border-radius: 10px;
+    width: 315px;
+    margin: auto;
     display: block;
-}
-
-p.learning {
-    background: var(--yellow);
-    font-weight: bold;
-    border-radius: 5px;
-    width: 25%;
-    padding: 5px 10px;
-    margin-bottom: 15px;
-}
-
-p.published {
     margin-bottom: 20px;
 }
 
+p.learning {
+    font-weight: bold;
+    font-size: .8em;
+    background: var(--yellow);
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+p.published {
+    margin-bottom: 12px;
+    font-size: .8em;
+}
+
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.4em;
     margin-bottom: 15px;
 }
 
+h1:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
 p.description {
+    line-height: 1.4;
     color: var(--gray-500);
     margin-bottom: 20px;
 }
 
-div.container-avatar {
+div.avatar {
     display: flex;
     align-items: center;
 }
 
-div.container-avatar img {
-    width: 40px;
+div.avatar img[src*='avatar'] {
+    width: 30px;
 }
 
-div.container-avatar p {
-    display: inline;
+div.avatar p.greg {
     font-weight: bold;
-    margin-left: 10px;
+    font-size: .8em;
+    padding-left: 13px;
 }
 
 .attribution { 
-    font-size: 1em; 
+    font-size: 11px;
     text-align: center; 
-    font-weight: bold;
     position: absolute;
     bottom: 0;
 }
